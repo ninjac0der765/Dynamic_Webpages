@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+        <link rel="stylesheet" href="css/calculator.css">
+    </head>
+    <body>
+        <label for="num1">
+            enter number 1
+        </label> <br>
+        <input type="number" id="num1" name="num1"> <br> <br>
+        <label for="num2">
+            enter number 2
+        </label> <br>
+        <input type="number" id="num2" num="num2"> <br> <br>
+        <button onclick="answer()">
+                submit
+        </button>
+        <p id="p1">
+        </p>
+        <script>
+            var num1=0;
+            var num2=0;
+            var add=0;
+            var sub=0;
+            var mult=0;
+            var div=0;
+            function answer(){
+            num1=parseInt(document.getElementById("num1").value);
+            num2=parseInt(document.getElementById("num2").value);
+            add=num1+num2;
+            sub=num1-num2;
+            mult=num1*num2;
+            div=num1/num2;
+            document.getElementById("p1").innerHTML="the addition of the 2 numbers is "+add+"<br>"+"the subtraction of the 2 numbers is "+sub+"<br>"+"the multiplacation of the 2 numbers is "+mult+"<br>"+"the division of the 2 numbers is "+div;}
+        </script>
+    </body>
+</html>
