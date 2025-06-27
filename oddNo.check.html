@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            Even or Odd?
+        </title>
+    </head>
+    <body>
+        <h1>
+            Is your number even or odd?
+        </h1>
+        <label for="lbl1">
+            Enter a number
+        </label> <br> <br>
+        <input type="number" name="lbl1" id="lbl1"> <br> <br>
+        <button id="button1" onclick="oddOReven()">
+            Submit
+        </button>
+        <p id="p1">
+             
+        </p>
+        <script>
+            function oddOReven(){
+              var var1=document.getElementById("lbl1").value;
+              if (var1%2==0){
+                document.getElementById("p1").innerHTML="This number is even!";
+              }
+              else{
+                document.getElementById("p1").innerHTML="This number is odd!";
+              }
+            }
+        </script>
+    </body>
+</html>

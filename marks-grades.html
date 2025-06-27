@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Marks to Grades
+        </title>
+    </head>
+    <body>
+        <h1>
+            Give me your marks and i will say your grade!
+        </h1>
+        <label for="lbl1">
+            What marks did you get?
+        </label> <br> <br>
+        <input type="number" name="lbl1" id="lbl1"> <br> <br>
+        <button onclick="Grades()">
+            Submit
+        </button>
+        <p id="p1">
+
+        </p>
+        <script>
+            function Grades(){
+                var var1=document.getElementById("lbl1").value;
+                if (var1>=90){
+                    document.getElementById("p1").innerHTML="Your grade is A"
+                }
+                else if(var1>=75){
+                    document.getElementById("p1").innerHTML="Your grade is B"
+                }
+                else if(var1>=50){
+                    document.getElementById("p1").innerHTML="Your grade is C"
+                }
+                else{
+                    document.getElementById("p1").innerHTML="Your grade is D"
+                }
+            }
+        </script>
+    </body>
+</html>

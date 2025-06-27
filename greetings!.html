@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>
+            Greetings!!
+        </title>
+    </head>
+    <body>
+        <h1>
+            Greetings!!!
+        </h1>
+        <label for="lbl1">
+            Whats your name?
+        </label> <br> <br>
+        <input type="text" name="lbl1" id="lbl1"> <br> <br>
+        <button id="button1" onclick="greeting()">
+            Submit
+        </button>
+        <p id="p1">
+  
+        </p>
+        <script>
+            function greeting(){
+               var var1=document.getElementById("lbl1").value;
+               var hh=new Date().getHours();
+               var mm=new Date().getMinutes();
+               var ss=new Date().getSeconds();
+               var time=hh+":"+mm+":"+ss;
+               if (hh<12){
+                document.getElementById("p1").innerHTML="Hi "+var1+" Good Morning, "+"it's "+time;
+               }
+               else if(hh<16){
+                document.getElementById("p1").innerHTML="Hi "+var1+" Good Afternoon, "+"it's "+time;
+               }
+               else if(hh<20){
+                document.getElementById("p1").innerHTML="Hi "+var1+" Good Evening, "+"it's "+time;
+               }
+               else{
+                document.getElementById("p1").innerHTML="Hi "+var1+" Good Night, "+"it's "+time;
+               }
+            }
+        </script>
+    </body>
+</html>
