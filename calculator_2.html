@@ -1,0 +1,75 @@
+<html>
+    <head><title>
+        Calculator 2.0
+    </title>
+    <link rel="stylesheet" href="#">
+    </head>
+    <body>
+        <h1>
+             This is a calculator.
+        </h1>
+        <table style="border: 1px solid black; text-align: center;">
+            <tr>
+                <td colspan="4">
+                    <input type="text" name="input1" id="input1" style="text-align: right;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="b1" value="7" onclick="input1.value+='7'">
+                </td>
+                <td>
+                    <input type="button" name="b2" value="8" onclick="input1.value+='8'">
+                </td>
+                <td>
+                    <input type="button" name="b3" value="9" onclick="input1.value+='9'">
+                </td>
+                <td>
+                    <input type="button" name="b4" value="+" onclick="input1.value+='+'">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="b5" value="4" onclick="input1.value+='4'">
+                </td>
+                <td>
+                    <input type="button" name="b6" value="5" onclick="input1.value+='5'">
+                </td>
+                <td>
+                    <input type="button" name="b7" value="6" onclick="input1.value+='6'">
+                </td>
+                <td>
+                    <input type="button" name="b8" value="-" onclick="input1.value+='-'">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="b9" value="1" onclick="input1.value+='1'">
+                </td>
+                <td>
+                    <input type="button" name="b10" value="2" onclick="input1.value+='2'">
+                </td>
+                <td>
+                    <input type="button" name="b11" value="3" onclick="input1.value+='3'">
+                </td>
+                <td>
+                    <input type="button" name="b12" value="/" onclick="input1.value+='/'">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="b13" value="C" onclick="input1.value=''">
+                </td>
+                <td>
+                    <input type="button" name="b14" value="0" onclick="input1.value+='0'">
+                </td>
+                <td>
+                    <input type="button" name="b15" value="=" onclick="input1.value=eval(input1.value)">
+                </td>
+                <td>
+                    <input type="button" name="b16" value="*" onclick="input1.value+='*'">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

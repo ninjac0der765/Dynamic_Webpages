@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            Digital Clock
+        </title>
+         <link rel="stylesheet" href="css/digital_clock.css">
+        <script>
+           function call_time(){
+           var hh=new Date().getHours();
+            var mm=new Date().getMinutes();
+            var ss=new Date().getSeconds();
+            if(hh<10){
+                hh="0"+hh;
+            }
+            if(mm<10){
+                mm+"0"+mm;
+            }
+            if(ss<10){
+                ss="0"+ss;
+            }
+            document.getElementById("p1").innerHTML=hh+":"+mm+":"+ss;
+           refresh();}
+           function refresh(){
+            var ref=1000;
+            var a=setTimeout("call_time()",ref)
+           }
+        </script>
+    </head>
+    <body onload="refresh()">
+        <h1>
+            Digital Clock!!
+        </h1> <br> <br>
+        <div id="div1">
+            <p id="p1">
+
+            </p> <br> <br>
+        </div>
+        <div id="div2">
+            <p>
+                This timezone is PST
+              </p>
+        </div>
+    </body>
+</html>
