@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            nth Calculator
+        </title>
+        <link rel="stylesheet" href="css/nth.css">
+    </head>
+    <body>
+        <h1>
+            This is a nth calculator
+        </h1>
+        <label for="lbl1">
+            Enter a nth value
+        </label> <br>
+        <input type="number" name="lbl1" id="lbl1"> <br> <br>
+        <button onclick="nth()">
+            Submit
+        </button>
+        <p id="p1">
+
+        </p>
+        <script>
+            function nth(){
+                var var1=document.getElementById("lbl1").value;
+                var var3=0;
+                for(var2=1;var2<=var1;var2++){
+                    var3+=var2;
+                }
+                document.getElementById("p1").innerHTML=var3;
+            }
+        </script>
+    </body>
+</html>
