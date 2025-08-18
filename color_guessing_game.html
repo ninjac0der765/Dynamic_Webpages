@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>
+            Guess the color!
+        </title>
+        <link rel="stylesheet" href="css/color_guess.css">
+        <script>
+            //init var
+            var guesscolor=0;
+            var flag=0;
+            var color1="";
+            var color2="";
+            var color3="";
+            var color4="";
+            var color5="";
+            //init var done
+        </script>
+    </head>
+    <body>
+        <h1>
+            Guess the color!!!!!
+        </h1>
+        <h3>
+            I have selected a random color from the list. <br>
+            Lets see if you can guess it!
+        </h3>
+        <form id="f1">
+            <label for="lbl1">
+                Choose the color I selected.
+            </label>
+            <select name="s1" id="s1" onchange="check_color(this)">
+                <option value="opt1" id="opt1">
+                    Color A
+                </option>
+                <option value="opt2" id="opt2">
+                    Color B
+                </option>
+                <option value="opt3" id="opt3">
+                    Color C
+                </option>
+                <option value="opt4" id="opt4">
+                    Color D
+                </option>
+                <option value="opt5" id="opt5">
+                    Color E
+                </option>
+            </select>
+            <p id="p1">
+
+            </p>
+        </form>
+        <script>
+            //presantation piece
+            //color1
+            var r=Math.floor(Math.random()*255);
+            var g=Math.floor(Math.random()*255);
+            var b=Math.floor(Math.random()*255);
+            color1="rgb(" +r+ ", " +g+ ", " +b+ ")";
+            var x=document.getElementById("s1").options.namedItem("opt1");
+            x.style.setProperty("background-color",color1);
+            //presantation piece
+            //color2
+            r=Math.floor(Math.random()*255);
+            g=Math.floor(Math.random()*255);
+            b=Math.floor(Math.random()*255);
+            color2="rgb(" +r+ ", " +g+ ", " +b+ ")";
+            x=document.getElementById("s1").options.namedItem("opt2");
+            x.style.setProperty("background-color",color2);
+            //color3
+            r=Math.floor(Math.random()*255);
+            g=Math.floor(Math.random()*255);
+            b=Math.floor(Math.random()*255);
+            color3="rgb(" +r+ ", " +g+ ", " +b+ ")";
+            x=document.getElementById("s1").options.namedItem("opt3");
+            x.style.setProperty("background-color",color3);
+            //color4
+            r=Math.floor(Math.random()*255);
+            g=Math.floor(Math.random()*255);
+            b=Math.floor(Math.random()*255);
+            color4="rgb(" +r+ ", " +g+ ", " +b+ ")";
+            x=document.getElementById("s1").options.namedItem("opt4");
+            x.style.setProperty("background-color",color4);
+            //color5
+            r=Math.floor(Math.random()*255);
+            g=Math.floor(Math.random()*255);
+            b=Math.floor(Math.random()*255);
+            color5="rgb(" +r+ ", " +g+ ", " +b+ ")";
+            x=document.getElementById("s1").options.namedItem("opt5");
+            x.style.setProperty("background-color",color5);
+            //colors_done
+            var bgcolors=[color1,color2,color3,color4,color5];
+            var cpu_choice=bgcolors[Math.floor(Math.random()*5)];
+            function check_color(a){
+              if(flag==0){  var select_opt=a.options[a.selectedIndex];
+                var select_color=window.getComputedStyle(select_opt,null).getPropertyValue("background-color");
+                document.getElementById("p1").style.backgroundColor=select_color;
+                if(select_color==cpu_choice){
+                    guesscolor=guesscolor+1;
+                    document.getElementById("p1").innerHTML="Congrats, you guessed the correct color in "+guesscolor+" guesses!!";
+                    flag=1;
+                }
+                else{
+                    guesscolor++;
+                    document.getElementById("p1").innerHTML="Oops, try again.";
+
+                }
+            }
+                else{
+                    document.getElementById("p1").innerHTML="You have already guessed the right color. Please refresh your tab.";
+                }
+            }
+        </script>
+    </body>
+
+</html>
