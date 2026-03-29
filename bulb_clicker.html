@@ -23,5 +23,26 @@
             function turn_off_bulb(){
                 document.getElementById("img1").src="images/pic_bulboff.gif";}
         </script>
+        <button onclick="toggleBulbWithEffect()">
+            Rainbow Effect
+        </button>
+        <script>
+            let bulbIsOn = false;
+
+            function toggleBulbWithEffect() {
+                bulbIsOn = !bulbIsOn;
+                const bulbImage = document.getElementById("img1");
+                
+                if (bulbIsOn) {
+                    bulbImage.src = "images/pic_bulbon.gif";
+                    document.body.style.backgroundColor = "#FFF8DC";
+                    bulbImage.style.boxShadow = "0 0 30px rgba(255, 200, 0, 0.8)";
+                } else {
+                    bulbImage.src = "images/pic_bulboff.gif";
+                    document.body.style.backgroundColor = "#FFFFFF";
+                    bulbImage.style.boxShadow = "none";
+                }
+            }
+        </script>
     </body>
 </html>
