@@ -72,5 +72,27 @@
                 </td>
             </tr>
         </table>
+        <script>
+            document.addEventListener('keyup', function (event) {
+                const inputField = document.getElementById('input1');
+                
+                // Allow number keys and operators
+                if (/[0-9+\-*/.]/.test(event.key)) {
+                    inputField.value += event.key;
+                }
+                // Allow Enter key to calculate
+                else if (event.key === 'Enter') {
+                    inputField.value = eval(inputField.value);
+                }
+                // Allow Backspace to delete
+                else if (event.key === 'Backspace') {
+                    inputField.value = inputField.value.slice(0, -1);
+                }
+                // Allow 'c' or 'C' to clear
+                else if (event.key.toLowerCase() === 'c') {
+                    inputField.value = '';
+                }
+            });
+        </script>
     </body>
 </html>
